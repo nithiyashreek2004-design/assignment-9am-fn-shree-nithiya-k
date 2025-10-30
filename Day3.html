@@ -25,7 +25,60 @@
         <section>
             <article>
                 <figure>
-                    <img src="semantic-chart.png" alt="Semantic Chart" style="max-width:100%; height:auto;">
+                    <svg role="img" aria-labelledby="flowTitle flowDesc" viewBox="0 0 900 340" width="100%" height="240" xmlns="http://www.w3.org/2000/svg">
+                        <title id="flowTitle">Semantic HTML flow chart</title>
+                        <desc id="flowDesc">Diagram showing header to nav/main to section to article to figure to footer relationships</desc>
+                        <defs>
+                            <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+                                <path d="M0 0 L10 5 L0 10 z" fill="#222"/>
+                            </marker>
+                            <style>
+                                .box { fill:#f3f4f6; stroke:#111827; stroke-width:1.5; rx:8; ry:8; }
+                                .label { font:14px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; fill:#0f172a; text-anchor:middle; }
+                                .sub { font:12px system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; fill:#374151; text-anchor:middle; }
+                            </style>
+                        </defs>
+
+                        <!-- Header -->
+                        <rect x="340" y="12" width="220" height="38" class="box"/>
+                        <text x="450" y="36" class="label">header</text>
+
+                        <!-- Nav (left of main) -->
+                        <rect x="80" y="90" width="200" height="36" class="box"/>
+                        <text x="180" y="114" class="label">nav</text>
+
+                        <!-- Main -->
+                        <rect x="340" y="90" width="220" height="38" class="box"/>
+                        <text x="450" y="114" class="label">main</text>
+
+                        <!-- Section inside main -->
+                        <rect x="340" y="150" width="220" height="36" class="box"/>
+                        <text x="450" y="174" class="label">section</text>
+
+                        <!-- Article inside section -->
+                        <rect x="340" y="210" width="220" height="36" class="box"/>
+                        <text x="450" y="234" class="label">article</text>
+
+                        <!-- Figure (detail to the right) -->
+                        <rect x="590" y="150" width="240" height="96" class="box"/>
+                        <text x="710" y="176" class="label">figure</text>
+                        <text x="710" y="198" class="sub">captioned content / diagram</text>
+
+                        <!-- Footer -->
+                        <rect x="340" y="280" width="220" height="36" class="box"/>
+                        <text x="450" y="304" class="label">footer</text>
+
+                        <!-- Arrows to show flow -->
+                        <line x1="450" y1="50" x2="450" y2="90" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+                        <line x1="280" y1="108" x2="340" y2="108" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+                        <line x1="450" y1="128" x2="450" y2="150" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+                        <line x1="450" y1="186" x2="450" y2="210" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+                        <line x1="560" y1="192" x2="590" y2="192" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+                        <line x1="450" y1="246" x2="450" y2="280" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+
+                        <!-- Legend / flow text -->
+                        <text x="450" y="330" class="sub">Flow: header → nav & main → section → article → figure → footer</text>
+                    </svg>
                     <figcaption>A visual representation of the semantic chart.</figcaption>
                 </figure>
             </article>
