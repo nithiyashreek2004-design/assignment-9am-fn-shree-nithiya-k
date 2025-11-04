@@ -1,0 +1,20 @@
+/* element selector  */
+div{
+   
+    background-color:yellow ;
+    text-align: center;
+    padding: 10px;
+}
+/* class selector */
+.profile-card{
+     background-color:blue; 
+    text-align: center;
+    margin:20px;
+    padding:20px;
+ 
+}
+/* ID selector */
+#paragraph{
+   background-color: green;
+    text-align: center;
+}
