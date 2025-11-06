@@ -1,0 +1,19 @@
+body{
+    background-color: lightskyblue;
+    text-align: center;
+}
+h{
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 2px;
+    color: brown;
+}
+
+
+
+.p{
+    font-family: Arial, sans-serif;
+    color: blue;
+    font-size: 20px;
+ 
+}
