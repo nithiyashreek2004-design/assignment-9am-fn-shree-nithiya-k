@@ -32,11 +32,6 @@ header {
   text-align: center;
 }
 
-.services {
-  background-color: #ffe6cc;
-  padding: 40px;
-  text-align: center;
-}
 
 /* ID selector — unique for one element */
 #contact {
@@ -45,11 +40,3 @@ header {
   text-align: center;
 }
 
-/* Footer using type selector again */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 10px;
-}
