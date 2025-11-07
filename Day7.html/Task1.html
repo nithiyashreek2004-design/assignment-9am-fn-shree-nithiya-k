@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Demonstration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 40px;
+}
+
+.margin {
+  background-color: #ffcccc;
+  padding: 30px; /* simulates margin area visually */
+  display: inline-block;
+}
+
+.border {
+  border: 5px dashed #ff0000;
+  background-color: #fff0f5;
+  padding: 25px;
+}
+
+.padding {
+  background-color: #ccffcc;
+  padding: 20px;
+}
+
+.content {
+  background-color: #cce5ff;
+  padding: 10px;
+}
+</style>
+<body>
+  <div class="margin">
+    Margin
+    <div class="border">
+      Border
+      <div class="padding">
+        Padding
+        <div class="content">
+          Content Area
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
