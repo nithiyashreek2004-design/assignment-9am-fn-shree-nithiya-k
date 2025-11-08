@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task9,10</title>
+ 
+</head>
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  justify-content:top;
+  align-items: top;
+  height: 100vh;
+}
+
+.alert-box {
+  background-color: #e6ffe6;
+  border: 2px solid #4CAF50;  
+  color: #333;
+  margin-top: auto;
+  padding: 20px;             
+  width: 300px;
+  border-radius: 8px;
+  
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between boxes */
+  margin-top: 40px;
+}
+
+.box {
+  width: 120px;
+  text-align: center;
+  border: 2px solid #333;
+  background-color: #f9f9f9;
+}
+
+/* Box 1 - shows padding */
+.padding-box {
+  padding: 20px;
+  background-color: #d1f7ff;
+}
+
+/* Box 2 - shows margin */
+.margin-box {
+  margin: 20px;
+  background-color: #ffe6b3;
+}
+
+/* Box 3 - both margin & padding */
+.combined-box {
+  margin: 20px;
+  padding: 20px;
+  background-color: #d4ffd4;
+}
+</style>
+<body>
+
+  <div class="alert-box">
+    <strong>Success!</strong> Your layout has been updated successfully.
+  </div>
+<div class="container">
+  <div class="box padding-box">Padding Box</div>
+  <div class="box margin-box">Margin Box</div>
+  <div class="box combined-box">Margin + Padding</div>
+</div>
+</body>
+</html>
