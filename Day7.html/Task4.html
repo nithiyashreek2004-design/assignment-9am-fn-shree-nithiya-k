@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task4</title>
+ 
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Common box style */
+.box {
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+  background-color: lightyellow;
+}
+
+/* Different border styles */
+.solid {
+  border: 4px solid red;
+}
+
+.dotted {
+  border: 4px dotted blue;
+}
+
+.dashed {
+  border: 4px dashed green;
+}
+/* common box styling */
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    border: 5px solidnavy;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+/* different box-sizing types */
+.content-box{
+    box-sizing: content-box;
+}
+.boder-box{
+    box-sizing: border-box;
+    background-color: lightgreen;
+}
+</style>
+<body>
+  <h1>Border Style Experiment</h1>
+
+  <div class="box solid">Solid Border</div>
+  <div class="box dotted">Dotted Border</div>
+  <div class="box dashed">Dashed Border</div>
+  <div class="box content-box"><p>content-box</p></div>
+  <div class="box boder-box"><p>border-box</p></div>
+</body>
+</html>
