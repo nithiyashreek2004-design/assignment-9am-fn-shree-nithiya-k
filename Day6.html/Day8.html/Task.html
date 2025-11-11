@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice task</title>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      color: #333;
+    }
+
+    /* Banner Section */
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      text-align: center;
+      padding: 120px 20px;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .banner h1 {
+      font-size: 3em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Box Section */
+    .boxes {
+      position: relative;
+      height: 400px;
+      margin: 60px 0;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    /* Relative Box */
+    .relative-box {
+      background-color: pink;
+      position: relative;
+      top: 20px;
+      left: 30px;
+    }
+
+    /* Absolute Box */
+    .absolute-box {
+      background-color:pink;
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+    }
+
+    /* Fixed Box */
+    .fixed-box {
+      background-color: pink;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <h1>Welcome to My Homepage</h1>
+    <p>Beautiful gradients, custom fonts & creative layouts</p>
+  </section>
+
+  <!-- Box Section -->
+  <section class="boxes">
+    <div class="box relative-box">Relative</div>
+    <div class="box absolute-box">Absolute</div>
+    <div class="box fixed-box">Contact-us</div>
+  </section>
+
+</body>
+</html>
