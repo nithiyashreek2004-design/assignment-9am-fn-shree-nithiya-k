@@ -18,7 +18,23 @@
         color: white;
         text-align: center;
     }
-   
+   .container{
+    width: 100%;
+    overflow: hidden;
+   }
+   .box{
+    width: 100px;
+    height: 100px;
+    background: lightpink;
+    margin: 10px;
+
+   }
+   .left{
+    float: left;
+   }
+   .right{
+    float: right;
+   }
 </style>
 <body>
     <section class="hero">
@@ -27,5 +43,9 @@
             <p>using flexbox vertically and horizontally</p>
         </div>
     </section>
+    <div class="container">
+        <div class="box left">left box</div>
+        <div class="box right">right box</div>
+    </div>
 </body>
 </html>
