@@ -3,49 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task4,5</title>
+    <title>progressive 3</title>
 </head>
 <style>
-    body{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    h1{
+       text-align: center;
     }
-    .hero{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        background: linear-gradient(135deg,#00bcd4,#00695c);
-        color: white;
+    .gallery{
         text-align: center;
+        padding: 40px 20px;
     }
-   .container{
-    width: 100%;
-    overflow: hidden;
-   }
-   .box{
-    width: 100px;
-    height: 100px;
-    background: lightpink;
-    margin: 10px;
-
-   }
-   .left{
-    float: left;
-   }
-   .right{
-    float: right;
-   }
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, mimax(250px,1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+    img{
+        width: 100%;
+    }
 </style>
 <body>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>welcome to hero content</h1>
-            <p>using flexbox vertically and horizontally</p>
-        </div>
-    </section>
-    <div class="container">
-        <div class="box left">left box</div>
-        <div class="box right">right box</div>
+    <h1>GALLERY SECTION</h1>
+    <section class="gallery">
+    <div class="grid-container">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.7-iJo3X0spIO5iAIbvrT6gHaEl?pid=Api&P=0&h=180"alt=p1>
+        <img src="https://tse3.mm.bing.net/th/id/OIP.rYQZtBhlU1CAH5wLbHElGwHaEI?pid=Api&P=0&h=180"alt=p1>
+         <img src="https://tse4.mm.bing.net/th/id/OIP.xddyM5Z5llwe5nz0xAnhvAHaD_?pid=Api&P=0&h=180"alt=p1>
+
     </div>
+    </section>
 </body>
 </html>
