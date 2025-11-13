@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+</head>
+<style>
+    .portfolio {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 70vh;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .portfolio header {
+      grid-area: header;
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .portfolio nav {
+      grid-area: nav;
+      background: #c8e6c9;
+      padding: 20px;
+    }
+
+    .portfolio main {
+      grid-area: main;
+      padding: 20px;
+      background: #f1f8e9;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .portfolio main div {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .portfolio footer {
+      grid-area: footer;
+      background: #388e3c;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }    
+</style>
+<body>
+    <!-- 5️⃣ Portfolio Page using Grid Template Areas -->
+  <h2>5️ Portfolio Page using Grid Template Areas</h2>
+  <section class="portfolio">
+    <header>My Portfolio</header>
+    <nav>
+      <p>Navigation Menu</p>
+      <ul>
+        <li>Home</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main>
+      <div>Project 1</div>
+      <div>Project 2</div>
+      <div>Project 3</div>
+      <div>Project 4</div>
+    </main>
+    <footer>© 2025 My Portfolio</footer>
+  </section>
+</body>
+</html>

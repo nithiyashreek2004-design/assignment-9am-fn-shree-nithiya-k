@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+<style>
+    .grid-flex-combo {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .combo-content {
+      background: #e3f2fd;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .combo-sidebar {
+      background: #bbdefb;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .combo-sidebar button {
+      background: #0d47a1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      cursor: pointer;
+    }
+</style>
+<body>
+    <!-- 4️⃣ Combine Grid and Flexbox -->
+  <h2>4️ Combine Grid and Flexbox for Complex Layout</h2>
+  <section class="grid-flex-combo">
+    <div class="combo-content">
+      <h3>Content Section (Grid + Flex)</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, nemo.
+      </p>
+      <button style="align-self:flex-start;">Read More</button>
+    </div>
+    <div class="combo-sidebar">
+      <h4>Sidebar Actions</h4>
+      <button> 1</button>
+      <button> 2</button>
+      <button> 3</button>
+    </div>
+  </section>
+</body>
+</html>
