@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7,8</title>
+</head>
+<style>
+    .product-grid{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr ;
+        gap: 20px;
+        padding: 20px;
+        margin: 20px;
+        justify-content: space-around;
+        background-color: red;
+     }
+     .p1{
+        background-color: blanchedalmond;
+        padding: 20px;
+        text-align: center;
+        
+     }
+</style>
+<body>
+    <div class="product-grid">
+        <div class="p1">product 1</div>
+          <div class="p1">product 2</div>
+         <div class="p1">product 3</div>
+        <div class="p1">product 4</div>
+     </div>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "aside main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      grid-area: nav;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    main {
+      grid-area: main;
+      background: #f4f4f4;
+      padding: 1rem;
+    }
+
+    aside {
+      grid-area: aside;
+      background: #ccc;
+      padding: 1rem;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <nav>Navigation</nav>
+    <aside>Sidebar</aside>
+    <main>Main Content Area</main>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
