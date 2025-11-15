@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid column and row</title>
+</head>
+<style>
+    body{
+        background-color: palevioletred;
+    }
+    .grid-box{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:repeat(4,150px);
+        gap: 20px;
+        padding: 20px;
+    }
+    .item{
+        background-color: lightblue;
+        border:2px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="grid-box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
