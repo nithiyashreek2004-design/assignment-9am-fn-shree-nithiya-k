@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+</head>
+<style>
+     .dashboard {
+      display: grid;
+      grid-template-areas:
+        "header"
+        " main"
+        " footer";
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+     }
+     .dashboard header {
+      grid-area: header;
+      background: #57dca4;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+     .dashboard main {
+      grid-area: main;
+      padding: 20px;
+      background: #f1f8e9;
+      text-align: center;
+    }
+
+    .dashboard footer {
+      grid-area: footer;
+      background: #0fc45e;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+</style>
+<body>
+     <h2> Dashboard Layout using Grid</h2>
+  <section class="dashboard">
+    <header> Header</header>
+    <main>Main  Content
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat id molestias earum in placeat, nobis voluptas exercitationem odit dolorem,
+                 voluptate sequi ullam fuga voluptatum nulla, aspernatur eos voluptatem tempore quasi dolore ipsam nam architecto vel veniam mollitia.
+                  Asperiores consequuntur blanditiis, laborum dolore labore praesentium ratione aperiam, officia itaque alias perspiciatis?</p>
+    </main>
+
+    <footer>Footer</footer>
+  </section>
+</body>
+</html>
