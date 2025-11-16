@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio layout</title>
+</head>
+<style>
+    .container{
+         display: grid;
+         grid-template-areas: 
+         "h1 h1"
+         "about about"
+         "projects sidebar"
+         "contact contact";
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        padding: 20px;
+        background-color:bisque;
+    }
+    h1{
+        text-align: center;
+        grid-area: h1;
+        background-color: darkolivegreen;
+        padding: 20px;
+    }
+    .about{
+        grid-area: about;
+        padding: 20px;
+        background-color: darksalmon;
+        text-align: center;
+    }
+    .projects{
+        grid-area: projects;
+        padding: 20px;
+        background-color: floralwhite;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,mimax(200px,1fr));
+        gap: 15px;
+
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: lightblue;
+        padding: 10px;
+    }
+    .contact{
+            grid-area: contact;
+             background-color: coral;
+             padding: 20px;
+             text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>portfolio</h1>
+        <section class="about">
+            <h2> About me</h2>
+            <p>This is shree nithiya.k web developer</p>
+        </section>
+        <section class="projects"><b>projects</b>
+            <div class="projects-card">project 1</div>
+            <div class="projects-card">project 2</div>
+            <div class="projects-card">project 3</div>
+            </section>
+        <aside class="sidebar">
+            <h3>skills</h3>
+            <ul>
+                <li>Html</li>
+                 <li>css</li>
+                  <li>js</li>
+            </ul>
+        </aside>
+        <footer class="contact">&copy 2025 my portfolio</footer>
+    </div>
+</body>
+</html>
