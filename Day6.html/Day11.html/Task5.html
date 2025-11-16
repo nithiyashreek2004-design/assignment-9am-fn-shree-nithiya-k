@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog homepage</title>
+</head>
+<style>
+      body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background: navy;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    main {
+      grid-area: main;
+      background: #f4f4f4;
+      padding: 1rem;
+    }
+
+    aside {
+      grid-area: aside;
+      background: #567;
+      padding: 1px;
+      text-align: center;
+    }
+    .footer{
+           grid-area: footer;
+           background:wheat;
+           padding: 1rem;
+           text-align: center;
+    }
+    </style>
+<body>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Post Area</main>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>
+</body>
+</html>
