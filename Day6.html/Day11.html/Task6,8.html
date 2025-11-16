@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio layout</title>
+    <title>portfolio/grid areas</title>
 </head>
 <style>
     .container{
@@ -11,7 +11,7 @@
          grid-template-areas: 
          "h1 h1"
          "about about"
-         "projects sidebar"
+         "services sidebar"
          "contact contact";
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
@@ -30,14 +30,23 @@
         background-color: darksalmon;
         text-align: center;
     }
-    .projects{
-        grid-area: projects;
-        padding: 20px;
-        background-color: floralwhite;
-        display: grid;
-        grid-template-columns: repeat(auto-fill,mimax(200px,1fr));
-        gap: 15px;
+  
+    .services {
+      grid-area: services;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+    }
 
+    .service-box {
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
     }
     .sidebar{
         grid-area: sidebar;
@@ -58,11 +67,12 @@
             <h2> About me</h2>
             <p>This is shree nithiya.k web developer</p>
         </section>
-        <section class="projects"><b>projects</b>
-            <div class="projects-card">project 1</div>
-            <div class="projects-card">project 2</div>
-            <div class="projects-card">project 3</div>
-            </section>
+     <section class="services">
+  <div class="service-box">Web Design</div>
+  <div class="service-box">Frontend Development</div>
+  <div class="service-box">Backend Development</div>
+  <div class="service-box">SEO Optimization</div>
+</section>
         <aside class="sidebar">
             <h3>skills</h3>
             <ul>
