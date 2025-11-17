@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+   
+    .container{
+        width: 500px;
+        height: 500px;
+        background-color: darkred;
+        animation-name: myanimation;
+        animation-duration: 3s;
+        position:relative;
+        border-radius: 50%;
+       
+    }
+    
+    @keyframes myanimation {
+    /* from {background-color: darkred;}
+    to {background-color: blue;}         */
+      0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+    
+    
+    
+    
+    }
+</style>
+<body>
+    <!-- bootstrap
+    for style with http service -->
+
+<div class="container">
+
+</div>
+</body>
+</html>
+
+
+
+
