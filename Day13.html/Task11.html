@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusing keyframes</title>
+</head>
+<style>
+    body{
+        background-color:bisque;
+        height: 100%;
+        width: 100%;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "h1 h1"
+        "about about"
+        "services sidebar"
+        "contact contact";
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+    h1{
+        text-align: center;
+        grid-area: h1;
+        background-color: darkolivegreen;
+        padding: 20px;
+    }
+    li{
+        display:inline-block;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        background-color:lavender;
+        border-radius: 20px;
+    }
+    li:hover{
+        transform: scale(1.1);
+        background-color:goldenrod;
+    }
+    .about{
+        grid-area: about;
+        padding: 10px;
+        background-color: darksalmon;
+        text-align: center;
+    }
+  
+    .services {
+      grid-area: services;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .service-box {
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .service-box:hover{
+        transform: scale(1.1);
+        background-color:goldenrod;
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: lightblue;
+        padding: 10px;
+    }
+    .contact{
+            grid-area: contact;
+            background-color: coral;
+            padding: 20px;
+            text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>portfolio</h1>
+       <section>
+        <li>Home</li> 
+        <li>product card</li>
+        <li>progress bar</li> 
+        <section class="about">
+        <h2> About me</h2>
+        <p>This is shree nithiya.k web developer</p>
+        </section>
+     <section class="services">
+  <div class="service-box">Web Design</div>
+  <div class="service-box">Frontend Development</div>
+  <div class="service-box">Backend Development</div>
+  <div class="service-box">SEO Optimization</div>
+</section>
+        <aside class="sidebar">
+            <h3>skills</h3>
+            <ul>
+                <li>Html</li>
+                <li>css</li>
+                <li>js</li>
+            </ul>
+        </aside>
+        <footer class="contact">&copy 2025 my portfolio</footer>
+    </div>
+</section>
+</body>
+</html>
