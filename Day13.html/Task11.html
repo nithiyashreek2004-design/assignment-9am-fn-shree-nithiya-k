@@ -1,112 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reusing keyframes</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Portfolio</title>
 <style>
-    body{
-        background-color:bisque;
-        height: 100%;
-        width: 100%;
-    }
-    .container{
-        display: grid;
-        grid-template-areas: 
-        "h1 h1"
-        "about about"
-        "services sidebar"
-        "contact contact";
-        grid-template-columns: repeat(2,1fr);
-        gap: 10px;
-        padding: 10px;
-    }
-    h1{
-        text-align: center;
-        grid-area: h1;
-        background-color: darkolivegreen;
-        padding: 20px;
-    }
-    li{
-        display:inline-block;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-        background-color:lavender;
-        border-radius: 20px;
-    }
-    li:hover{
-        transform: scale(1.1);
-        background-color:goldenrod;
-    }
-    .about{
-        grid-area: about;
-        padding: 10px;
-        background-color: darksalmon;
-        text-align: center;
-    }
-  
-    .services {
-      grid-area: services;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 15px;
-    }
+body {
+    margin: 0;
+    background: bisque;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background: white;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+}
 
-    .service-box {
-      background: #fafafa;
-      padding: 15px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-    .service-box:hover{
-        transform: scale(1.1);
-        background-color:goldenrod;
-    }
-    .sidebar{
-        grid-area: sidebar;
-        background-color: lightblue;
-        padding: 10px;
-    }
-    .contact{
-            grid-area: contact;
-            background-color: coral;
-            padding: 20px;
-            text-align: center;
-    }
+.navbar li {
+    list-style: none;
+    padding: 10px 20px;
+    background: lavender;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navbar li:hover {
+    background: goldenrod;
+    transform: translateY(-3px) scale(1.08);
+}
+.hero {
+    height: 160px;
+    background: center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    animation: heroFade 2s ease-in-out forwards;
+    opacity: 0;
+    position: relative;
+    z-index:5;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
+    animation: slideDown 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    animation: fadeIn 2.2s ease-in-out forwards;
+    opacity: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "about about"
+    "services sidebar"
+    "contact contact";
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+.about {
+    grid-area: about;
+    background: darksalmon;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.services {
+    grid-area: services;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-box {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+}
+.service-box:hover {
+    transform: scale(1.08);
+    background: goldenrod;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+.contact {
+    grid-area: contact;
+    background: coral;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.animated-img {
+    width: 90px;
+    animation: floatUp 3s ease-in-out infinite;
+}
+
+@keyframes heroFade {
+    0% { opacity: 0; transform: scale(1.02); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
 </style>
+</head>
 <body>
-    <div class="container">
-        <h1>portfolio</h1>
-       <section>
-        <li>Home</li> 
-        <li>product card</li>
-        <li>progress bar</li> 
-        <section class="about">
-        <h2> About me</h2>
-        <p>This is shree nithiya.k web developer</p>
-        </section>
-     <section class="services">
-  <div class="service-box">Web Design</div>
-  <div class="service-box">Frontend Development</div>
-  <div class="service-box">Backend Development</div>
-  <div class="service-box">SEO Optimization</div>
+
+<section class="hero">
+    <h1>Portfolio</h1>
+    <p> • Animated</p>
 </section>
-        <aside class="sidebar">
-            <h3>skills</h3>
-            <ul>
-                <li>Html</li>
-                <li>css</li>
-                <li>js</li>
-            </ul>
-        </aside>
-        <footer class="contact">&copy 2025 my portfolio</footer>
-    </div>
-</section>
+
+<ul class="navbar">
+    <li>Home</li>
+    <li>Product Card</li>
+    <li>Progress Bar</li>
+</ul>
+
+<div class="container">
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p> Shree Nithiya K — Web Developer</p>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.DBRdxf84gopjaVPdxPMhyQHaGq?pid=Api&P=0&h=180" class="animated-img">
+    </section>
+
+    <section class="services">
+        <div class="service-box">Web Design</div>
+        <div class="service-box">Frontend Development</div>
+        <div class="service-box">Backend Development</div>
+        <div class="service-box">SEO Optimization</div>
+    </section>
+    <aside class="sidebar">
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ul>
+    </aside>
+    <footer class="contact">
+        © 2025 My Portfolio
+    </footer>
+
+</div>
+
 </body>
 </html>
