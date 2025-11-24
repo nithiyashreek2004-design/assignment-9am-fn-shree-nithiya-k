@@ -1,49 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap & Tailwind Navbar + Cards</title>
+
+  <!-- Bootstrap CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4">
+  <h1 class="text-3xl font-bold mb-6">Bootstrap Version</h1>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MySite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mb-12">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Card One</h5>
+            <p class="card-text">Bootstrap card with responsive grid.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Card Two</h5>
+            <p class="card-text">Easily adjusts across breakpoints.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Card Three</h5>
+            <p class="card-text">Consistent styling using Bootstrap.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+  <h1 class="text-3xl font-bold mb-6">Tailwind Version</h1>
+
+  <nav class="bg-gray-900 text-white p-4 mb-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-semibold">MySite</div>
+      <button class="md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+      <ul class="hidden md:flex gap-6">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">About</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </div>
+    <ul id="mobileMenu" class="md:hidden mt-4 flex flex-col gap-2 hidden">
+      <li><a href="#" class="hover:text-gray-300">Home</a></li>
+      <li><a href="#" class="hover:text-gray-300">About</a></li>
+      <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="border rounded-xl shadow p-4">
+      <img src="https://via.placeholder.com/300" class="rounded" />
+      <h3 class="text-xl font-semibold mt-3">Card One</h3>
+      <p class="text-gray-700">Tailwind card using utility classes.</p>
+    </div>
+
+    <div class="border rounded-xl shadow p-4">
+      <img src="https://via.placeholder.com/300" class="rounded" />
+      <h3 class="text-xl font-semibold mt-3">Card Two</h3>
+      <p class="text-gray-700">Responsive grid via Tailwind.</p>
+    </div>
+
+    <div class="border rounded-xl shadow p-4">
+      <img src="https://via.placeholder.com/300" class="rounded" />
+      <h3 class="text-xl font-semibold mt-3">Card Three</h3>
+      <p class="text-gray-700">Easily styled and extended.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
