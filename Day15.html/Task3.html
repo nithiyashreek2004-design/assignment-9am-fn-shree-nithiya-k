@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mini project Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+  <!-- ================= HERO / HOMEPAGE SECTION ================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container text-center py-5">
+      <h1 class="display-4 fw-bold mb-3">All-in-One Bootstrap Demo</h1>
+      <p class="lead text-muted mb-4">Homepage + Blog + Gallery + Pricing Table — all built using Bootstrap utilities.</p>
+      <a href="#pricing" class="btn btn-primary btn-lg px-4">See Pricing</a>
+    </div>
+  </section>
+  <!-- ================= PRICING TABLE SECTION ================= -->
+  <section id="pricing" class="py-5">
+    <div class="container py-4">
+      <h2 class="fw-bold text-center mb-5">Pricing Table</h2>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+            <h4 class="fw-bold mb-3">Basic</h4>
+            <p class="display-6 fw-bold mb-3">$9</p>
+            <p class="mb-4">Simple features for individuals.</p>
+            <a href="#" class="btn btn-outline-primary w-100">Choose Plan</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-primary text-white rounded shadow-sm text-center h-100">
+            <h4 class="fw-bold mb-3">Pro</h4>
+            <p class="display-6 fw-bold mb-3">$29</p>
+            <p class="mb-4">Great for professionals and teams.</p>
+            <a href="#" class="btn btn-light w-100">Choose Plan</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+            <h4 class="fw-bold mb-3">Enterprise</h4>
+            <p class="display-6 fw-bold mb-3">$99</p>
+            <p class="mb-4">Everything for large-scale needs.</p>
+            <a href="#" class="btn btn-outline-primary w-100">Choose Plan</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REBUILT LAYOUT USING ONLY UTILITIES ================= -->
+  <section class="py-5 bg-dark text-white border-top">
+    <div class="container py-4 text-center">
+      <h2 class="fw-bold mb-3">Utility‑Only Rebuilt Layout</h2>
+      <p class="lead mb-4">This block demonstrates design completely built using Bootstrap utilities — no custom CSS.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <div class="p-4 bg-white text-dark rounded shadow-sm" style="width: 250px;"> Box 1</div>
+        <div class="p-4 bg-white text-dark rounded shadow-sm" style="width: 250px;"> Box 2</div>
+        <div class="p-4 bg-white text-dark rounded shadow-sm" style="width: 250px;"> Box 3</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
