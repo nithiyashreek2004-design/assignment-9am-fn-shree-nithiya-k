@@ -26,7 +26,7 @@
   <div class="container">
     <a class="navbar-brand" href="#"><i class="bi bi-stars"></i> My Portfolio</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" title="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -50,25 +50,25 @@
 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100 carousel-img" src="https://picsum.photos/id/1015/900/400" alt="">
+      <img class="d-block w-100  carousel-img" src="https://picsum.photos/id/1015/900/400" alt="">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100 carousel-img" src="https://picsum.photos/id/1025/900/400" alt="">
+      <img class="d-block w-100 carousel-img" src="https://tse1.mm.bing.net/th/id/OIP.VpEV2jZCnUQczxsj47XlWwHaE7?pid=Api&P=0&h=180" alt="">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100 carousel-img" src="https://picsum.photos/id/1043/900/400" alt="">
     </div>
   </div>
 
-  <button type="button" class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
+  <button type="button" class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
   </button>
-
-  <button type="button" class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
+  <button type="button" class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 <!-- ================= PRODUCT SHOWCASE ================= -->
 <div class="container my-5">
   <h2 class="text-center mb-4">Product Showcase</h2>
@@ -78,31 +78,21 @@
       <div class="carousel-item active">
         <img class="d-block w-100 carousel-img" src="https://tse1.mm.bing.net/th/id/OIP.Mq2DxtxI4SzvG4tZsyM9KwHaD4?pid=Api&P=0&h=180" alt="">
       </div>
+
       <div class="carousel-item">
         <img class="d-block w-100 carousel-img" src="https://tse1.mm.bing.net/th/id/OIP.fVIhtuB65uFqsIDubK7OzQHaE8?pid=Api&P=0&h=180" alt="">
       </div>
     </div>
 
-    <button type="button" class="carousel-control-prev" data-bs-target="#productCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-
-    <button type="button" class="carousel-control-next" data-bs-target="#productCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-
-  <!-- Collapse More Details -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#details">
-    More Details
-  </button>
-
-  <div id="details" class="collapse mt-3">
-    <div class="card card-body">
-      This product is designed for professionals who want high-quality, responsive UI components built with Bootstrap.
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev" aria-label="Previous">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+  
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next" aria-label="Next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </div>
-</div>
 
 <!-- ================= FAQ SECTION ================= -->
 <div class="container my-5">
@@ -134,6 +124,18 @@
 
   </div>
 </div>
+<!-- BUTTON BELOW FAQ SECTION -->
+<div class="text-center my-4">
+  <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="collapse" data-bs-target="#extraInfo">
+    More Details
+  </button>
+
+  <div id="extraInfo" class="collapse mt-3">
+    <div class="card card-body">
+      Additional details about your products, services, or any information you want to show here.
+    </div>
+  </div>
+</div>
 
 <!-- ================= CONTACT MODAL ================= -->
 <div class="modal fade" id="contactModal">
@@ -142,7 +144,22 @@
 
       <div class="modal-header">
         <h5 class="modal-title"><i class="bi bi-envelope"></i> Contact Form</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div id="productCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+            </div>
+            <div class="carousel-item">
+            </div>
+          </div>
+          <button type="button" class="carousel-control-prev" data-bs-target="#productCarousel" data-bs-slide="prev" aria-label="Previous">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button type="button" class="carousel-control-next" data-bs-target="#productCarousel" data-bs-slide="next" aria-label="Next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
 
       <div class="modal-body">
