@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini projects</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    .carousel-img {
+      height: 400px;
+      object-fit: cover;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="bi bi-stars"></i> My Portfolio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" title="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-image"></i> Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-question-circle"></i> FAQ</a></li>
+
+        <li class="nav-item">
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#contactModal">
+            <i class="bi bi-envelope"></i> Contact
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO CAROUSEL ================= -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100  carousel-img" src="https://picsum.photos/id/1015/900/400" alt="">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 carousel-img" src="https://tse1.mm.bing.net/th/id/OIP.VpEV2jZCnUQczxsj47XlWwHaE7?pid=Api&P=0&h=180" alt="">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 carousel-img" src="https://picsum.photos/id/1043/900/400" alt="">
+    </div>
+  </div>
+
+  <button type="button" class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button type="button" class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- ================= FAQ SECTION ================= -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
+  <div class="accordion" id="faqAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+          More info
+        </button>
+      </h2>
+      <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Additional details about your products, services, or any information you want to show here.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+         project details
+        </button>
+      </h2>
+      <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">This project showcases key features, technologies used, and the overall purpose of the work.
+          It highlights the main functionalities, 
+          design approach, and tools used during development</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ================= CONTACT MODAL ================= -->
+<div class="modal fade" id="contactModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-envelope"></i> Contact Form</h5>
+        <div id="productCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+            </div>
+            <div class="carousel-item">
+            </div>
+          </div>
+          <button type="button" class="carousel-control-prev" data-bs-target="#productCarousel" data-bs-slide="prev" aria-label="Previous">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button type="button" class="carousel-control-next" data-bs-target="#productCarousel" data-bs-slide="next" aria-label="Next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" placeholder="Email">
+          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </form>
+      </div>
+
+        <button type="submit" class="btn btn-primary w-100 fw-bold">HIRE ME</button>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  <p>Follow me on social media:</p>
+  <div>
+    <i class="bi bi-facebook mx-2"></i>
+    <i class="bi bi-instagram mx-2"></i>
+    <i class="bi bi-github mx-2"></i>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
