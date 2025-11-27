@@ -84,13 +84,17 @@
       <h2 class="fw-bold mb-3">Get In Touch</h2>
       <p class="lead text-muted mb-4">Feel free to reach out for collaborations or project inquiries.</p>
       <a href="mailto:someone@example.com" class="btn btn-primary btn-lg px-4">Email Me</a>
+      <button class="btn btn-warning btn-lg px-4 ms-3" onclick="changeText()">
+  Change Text
+</button>
+
     </div>
   </section>
 
   <!-- FOOTER improved with Flex Utilities -->
   <footer class="py-4 bg-dark text-white">
     <div class="container d-flex justify-content-between align-items-center flex-wrap">
-      <p class="mb-0">© 2025 MyPortfolio</p>
+      <p class="mb-0">&copy<span id="year"></span> MyPortfolio-<span id="currentdate"></span></p>
       <div class="d-flex gap-3">
         <a href="#" class="text-white">LinkedIn</a>
         <a href="#" class="text-white">GitHub</a>
@@ -105,5 +109,37 @@
     alert("Welcome to my portfolio!");
   };
 </script>
+<script>
+const now =new Date();
+document.getElementById("currentdate").innerText =now.toLocaleDateString("en-GB",
+   {
+    day:"numeric",
+    month:"long",
+    year:"numeric"});
+    </script>
+    <script>
+function changeText() {
+  // Change all headings
+  document.querySelector("h1").innerText = "Welcome to My Updated Portfolio!";
+  document.querySelector("h2").innerText = "About My Updated Journey";
+  document.querySelector("h3").innerText = "Updated Web Developer";
+
+  // Change paragraphs
+  const allParagraphs = document.querySelectorAll("p");
+  allParagraphs.forEach(p => {
+    p.innerText = "This content was updated using JavaScript!";
+  });
+
+  // Change navbar text
+  document.querySelector(".navbar-brand").innerText = "UpdatedPortfolio";
+
+  // Change project titles
+  const titles = document.querySelectorAll("h4");
+  titles[0].innerText = "Updated Project One";
+  titles[1].innerText = "Updated Project Two";
+  titles[2].innerText = "Updated Project Three";
+}
+</script>
+
 </body>
 </html>
