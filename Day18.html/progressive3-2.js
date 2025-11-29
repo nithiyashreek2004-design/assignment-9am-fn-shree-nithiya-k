@@ -25,19 +25,17 @@ incrementBtn.addEventListener("click", () => {
   counter++;
   counterDisplay.innerText = counter;
 });
-
 decrementBtn.addEventListener("click", () => {
   counter--;
   counterDisplay.innerText = counter;
 });
-
 // -------------------------------
 // Toggle functionality
 // -------------------------------
 let isOn = false; // variable to track toggle state
 const toggleBtn = document.getElementById("toggleBtn");
 
-toggleBtn.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () =>)
   isOn = !isOn; // flip state
   if (isOn) {
     toggleBtn.innerText = "ON";
@@ -47,8 +45,7 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.innerText = "OFF";
     toggleBtn.classList.remove("toggle-on");
     toggleBtn.classList.add("toggle-off");
-  }
-});
+  };
 
 
 </script>
