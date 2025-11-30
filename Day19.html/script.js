@@ -51,3 +51,28 @@ console.log(typeof y);// BigInt
 
 let id= Symbol("uniqueid"); 
 console.log(typeof id);// symbol    
+
+
+
+
+
+// creating object in js
+let person = {
+    name: "charu",
+    age: 30,
+    isStudying: true
+};
+console.log(person);
+console.log(typeof person); // object
+
+
+// convert 45 to Number
+let value = "45";
+console.log(value);
+console.log(typeof value);
+
+
+// convert false to a string
+let str =String(false);
+console.log(str);
+console.log(typeof str);
