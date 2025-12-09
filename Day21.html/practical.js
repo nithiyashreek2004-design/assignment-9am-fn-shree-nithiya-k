@@ -9,6 +9,8 @@
 // // </script>
 
 
+
+
 // let numbers = [10, 20, 30, 40, 50];
 // let searchValue = 60;
 
@@ -26,12 +28,27 @@
 //   console.log(`Value ${searchValue} not found`);
 // }
 
-let y = 4;
-do
-{
-  console.log("the password is correct");
+
+
+
+// let y = "hlouser04";
+// let userInput;
+// do
+// {
+//   userInput = ("The password is correct:");
+// }
+// while 
+//   (userInput !== y);
+//    alert("login successful!");
+
+
+
+let cartprice =(599,300,199,200);
+let total = 0;
+for(let i=0; i < cartprice; i++){
+  total +=cartprice[i];
 }
-while 
-  (y < 3);
-    console.log("try again");
+console.log("total cart amount:"+ total);
+
+
 
