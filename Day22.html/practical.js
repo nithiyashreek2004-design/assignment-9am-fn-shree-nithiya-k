@@ -43,7 +43,7 @@ function rectangleArea(length, width) {
 }
 
 console.log(rectangleArea(10, 5));
-console.log(rectangleArea(7, 3));
+console.log(rectangleArea(7, 3)); //-------rect calci
 
 
 function login(username, password) {
