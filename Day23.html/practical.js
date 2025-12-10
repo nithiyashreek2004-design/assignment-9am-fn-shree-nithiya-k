@@ -58,4 +58,14 @@ console.log(price);
 console.log(brand);
 
 //-------------------------------------------------------------------------
-
+function vehicle(type){
+    this.type = type;
+}
+vehicle.prototype.start = function(){
+    return`${this.type}is starting...`;
+};
+function Car(brand,type){
+    vehicle.call(this.type);
+    this.brand = brand;
+}
+Car.prototype = Object.create
