@@ -11,7 +11,7 @@ Login(){
 const user1 = new user("shree","shree@example.com");
 console.log(user1.Login());
 
-//---------------------------------------------------------
+//-------------------------------------------------------------
 class BankAccount {
   constructor(name, balance) {
     this.name = name;
@@ -40,7 +40,7 @@ console.log(acc1.deposit(2000));
 console.log(acc1.withdraw(1000));
 console.log(acc1.withdraw(7000));   // Trying more than balance
 
-//------------------------------------------------------------------------
+//----------------------------------------------------------------------
 const product1 = {
   name: "Laptop",
   price: 55000,
@@ -57,5 +57,5 @@ console.log(name);
 console.log(price);
 console.log(brand);
 
-//-------------------------------------------------------------------------
+//----------------------------------------------------------------------
 
