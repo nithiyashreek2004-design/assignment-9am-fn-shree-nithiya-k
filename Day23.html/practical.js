@@ -61,11 +61,47 @@ console.log(brand);
 function vehicle(type){
     this.type = type;
 }
-vehicle.prototype.start = function(){
-    return`${this.type}is starting...`;
+vehicle.prototype.start = function(){  //strats from here
+    return`${this.type} is starting...`;
 };
 function Car(brand,type){
-    vehicle.call(this.type);
+    vehicle.call(this,type);
     this.brand = brand;
 }
-Car.prototype = Object.create
+Car.prototype = Object.create(vehicle.prototype);
+Car.prototype.contructor = Car;
+Car.prototype.drive = function(){    // 
+  return`${this.brand} car is driving.`;
+};
+function ElectricCar(brand,type,battery){
+  Car.call(this,brand,type);
+  this.battery = battery;
+}
+ElectricCar.prototype = Object.create(Car.prototype);
+ElectricCar.prototype.contructor = ElectricCar;
+ElectricCar.prototype.charge = function(){
+  return`Charging battery: ${this.battery}%`;
+};
+const tesla = new ElectricCar("MG(Electric)","Eletric",90);
+console.log(tesla.start());
+console.log(tesla.drive());
+console.log(tesla.charge())
+//----------------------------------------------------------------------------
+class Student{
+  constructor(name ="shravin",grade,course = "cs"){
+    this.name = name;
+    this.grade = grade;
+     this.course = course;
+  
+  }
+  getInfo(){
+    return`${this.name}  is  grade ${this.grade}`;
+  }
+  getCourse(){
+    return`${this.name} is studying ${this.course}`;
+  }
+}
+const m1 = new Student("varma","6th",);
+const m2 = new Student();
+console.log(m1.getInfo());
+console.log(m2.getCourse());
