@@ -31,5 +31,16 @@ const combined = a.concat(b);
 console.log(combined);
 
 
+//After id created on html page we can edit that script and its run in output screen
+
+// const product = [{name:"Tab", price: 70000},
+//                  {name:"mouse", price:500},
+//                  {name:"keyboard",price:1700}];
+// const list = document.getElementById("productList");
+// product.forEach(product => {
+//     const li = document.createElement("li");
+//     li.textContent = product.name;
+//     list.appendChild(li);
+// });
 
 
