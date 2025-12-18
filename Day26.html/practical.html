@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body {
+      font-family: Arial;
+      padding: 20px;
+      background: white;
+      color: black;
+    }
+
+    .dark {
+      background: black;
+      color: white;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .todo-item {
+      margin: 5px 0;
+    }
+</style>
+<body>
+    <button id="darkbtn">Toggle Dark Mode</button>
+
+    <hr>
+
+<input type="text" id="liveinput" placeholder="Type something">
+<p id="liveText"></p>
+
+<hr>
+
+<input type="text" id="todoInput" placeholder="Enter task">
+<button id="addTodo">Add Task</button>
+<ul id="todoList"></ul>
+
+<hr>
+
+<button class = "colorBtn" data-color = "red">red</button>
+<button class = "colorBtn" data-color = "green">green</button>
+<button class = "colorBtn" data-color = "blue">blue</button>
+
+<hr>
+
+<button id="htmlBtn">Insert HTML</button>
+<p id ="htmlText"></p>
+
+<script>
+    document.getElementById("darkbtn").addEventListener("click",()=>{
+        document.body.classList.toggle = ("Dark");
+    });
+
+    document.getElementById("liveInput").addEventListener("input",(e)=>{
+        document.getElementById("liveText").textContent = e.target.value;
+    });
+    
+    document.getElementById("addTodo").addEventListener("click",()=>{
+        const text = document.getElementById("todoInput").value;
+        if (text ==="")return;
+       
+      const li = document.createElement("li");
+      li.textContent = text;
+      li.className = "todo-item";
+
+      li.onclick = () => li.remove();
+      document.getElementById("todoList").appendChild(li);
+
+      document.getElementById("todoInput").value = "";   
+    });
+  
+      document.querySelectorALL(".colorBtn").forEach(btn => {
+        btn.addEventListener("click",()=>{
+            document.body.style.background = btn.dataset.color;
+        });
+      });    
+      
+      document.getElementById("htmlBtn").addEventListener("click",()=>{
+        document.getElementById("htmlText").innerHTML= "<b> BOLD TEXT </B> and <i>Italic Text</i> added!";
+      });
+</script>
+</body>
+</html>
