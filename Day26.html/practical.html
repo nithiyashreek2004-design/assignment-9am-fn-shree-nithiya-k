@@ -32,7 +32,7 @@
 
     <hr>
 
-<input type="text" id="liveinput" placeholder="Type something">
+<input type="text" id="liveInput" placeholder="Type something">
 <p id="liveText"></p>
 
 <hr>
@@ -54,7 +54,7 @@
 
 <script>
     document.getElementById("darkbtn").addEventListener("click",()=>{
-        document.body.classList.toggle = ("Dark");
+        document.body.classList.toggle("dark");
     });
 
     document.getElementById("liveInput").addEventListener("input",(e)=>{
@@ -75,14 +75,14 @@
       document.getElementById("todoInput").value = "";   
     });
   
-      document.querySelectorALL(".colorBtn").forEach(btn => {
+      document.querySelectorAll(".colorBtn").forEach(btn => {
         btn.addEventListener("click",()=>{
             document.body.style.background = btn.dataset.color;
         });
       });    
       
       document.getElementById("htmlBtn").addEventListener("click",()=>{
-        document.getElementById("htmlText").innerHTML= "<b> BOLD TEXT </B> and <i>Italic Text</i> added!";
+        document.getElementById("htmlText").innerHTML= "<b> BOLD TEXT </b> and <i>Italic Text</i> added!";
       });
 </script>
 </body>
