@@ -1,0 +1,41 @@
+<!-- Interactive counter button
+Hover-based menu
+Login form validation
+Keyboard shortcut (Ctrl + S)
+Click tracker app -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICAL TASK</title>
+</head>
+<body>
+    <button id="countBtn">click here</button>
+    <p id="countText">Count: 0</p>
+    <hr>
+     <div id="menu">MENU</div>
+        <ul id="submenu" style="display:none">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+        <hr>
+       
+    <script>
+        let count =0;
+        document.getElementById("countBtn"),addEventListener("click",() =>{
+            count++;
+            document.getElementById("countText").innerText ="count:"+ count;
+        });
+        document.getElementById("menu").addEventListener("mouseenter",()=>{
+            document.getElementById("submenu").style.display= "block";
+        });
+         document.getElementById("menu").addEventListener("mouseleave",()=>{
+            document.getElementById("submenu").style.display= "none";
+        });
+    </script>
+</body>
+</html>
