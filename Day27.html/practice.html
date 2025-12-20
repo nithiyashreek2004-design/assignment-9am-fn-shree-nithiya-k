@@ -14,12 +14,46 @@ Display clicked element text -->
     <title>Document</title>
 </head>
 <body>
-    <button id="alertBtn">alertbutton</button>
-      <p class="myPara">This is a paragraph</p>
-      <button id=""></button>
+    <button id="alertBtn">alertbutton</button><br><hr>
+
+      <p id="myPara">This is a paragraph checking hover is working or not</p><br><hr>
+
+      <input type="text" id="keyInput" placeholder="Type here">
+      <br><hr>
+
+      <form id="myform">
+        <input type="text" placeholder="enter name">
+        <button type ="submit">submit</button> 
+      </form>   
+       <br><hr>
+       <button>APPLE</button>
+       <button>CHERRY</button>
+       <button>BANANA</button>
+       <P id="displaytext"></P>
     <script>
         document.getElementById("alertBtn").addEventListener("click",function(){
             alert("alert message is working");
+        });
+
+        document.getElementById("myPara").addEventListener("mouseenter",() =>{
+            document.getElementById("myPara").style.color="GREEN";
+        });
+          document.getElementById("myPara").addEventListener("mouseleave",() =>{
+            document.getElementById("myPara").style.color="black";
+        });
+
+        document.getElementById("keyInput").addEventListener("input",(event) =>{
+            console.log ("key pressed:" + event.key);
+        });
+        document.getElementById("myform").addEventListener("submit",(event)=>{
+            event.preventDefault(); //-----stop page reload
+            alert("form submitted once");
+        });
+        document.querySelectorAll("button").forEach(btn =>{
+            btn.addEventListener("click",(event) =>{
+                document.getElementById("display text").innerText
+                = "you clicked:" + btn.innerText;
+            });
         });
     </script>
 </body>
