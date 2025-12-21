@@ -8,7 +8,6 @@
 let user;
 console.log(user.name);
 
-
 //logical mistake in code
 let marks = 35;
 if (marks * 40) {
@@ -17,10 +16,14 @@ if (marks * 40) {
   console.log("Fail");
 }
 
-
 //console debug  
 let a = 10;
 let b = 0;
 console.log("b value:", b);
 console.log(a / b);
+
+//syntax error
+if (x > 5 {
+  console.log("Big");
+}
 
