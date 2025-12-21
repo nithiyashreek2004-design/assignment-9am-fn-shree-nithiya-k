@@ -23,7 +23,16 @@ Click tracker app -->
             <li>Contact</li>
         </ul>
         <hr>
-       
+       <form id="Login">
+        <input type="text" id="username" placeholder="username">
+        <input type="password" id="password"placeholder="password">
+        <button type="submit">submit</button>
+       </form>
+       <hr>
+        <button>APPLE</button>
+       <button>CHERRY</button>
+       <button>BANANA</button>
+       <P id="tract"></P>
     <script>
         let count =0;
         document.getElementById("countBtn"),addEventListener("click",() =>{
@@ -35,6 +44,28 @@ Click tracker app -->
         });
          document.getElementById("menu").addEventListener("mouseleave",()=>{
             document.getElementById("submenu").style.display= "none";
+        });
+
+        document.getElementById("Login").addEventListener("submit",(event)=>{
+            event.preventDefault();
+            document.getElementById ("username").value;
+            document.getElementById("password").value;
+            if(username === ""|| password ===""){
+                alert ("please fill all fields");
+            } else {
+                alert("login successful");
+            }
+        });
+        document.addEventListener("keydown",(event)=>{
+            if(event.ctrlKey && event.key ==="s"){
+                event.preventDefault();
+                alert("shortcut detected");
+            }
+        });
+        document.querySelectorAll("button").forEach(button =>{
+            button.addEventListener("click",(event)=>{
+                document.getElementById("tract").innerText="you clicked:"+ button.innerText;
+            });
         });
     </script>
 </body>
