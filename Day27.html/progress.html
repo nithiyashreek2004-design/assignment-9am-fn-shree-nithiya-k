@@ -1,0 +1,57 @@
+<!-- Add click events to navigation
+Validate forms using events
+Create modal popups
+Add hover effects
+Prepare for React event handling -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress task</title>
+</head>
+<body>
+        <nav id="menu">
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="about">About</a></li>
+                <li><a href="#" id="contact">Contact</a></li>
+            </ul>
+            <div id="submenu" style="display:none;">
+                <ul>
+                    <li><a href="#">Submenu 1</a></li>
+                    <li><a href="#">Submenu 2</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="modal" style="display:none;">
+            <p>This is a modal popup!</p>
+            <button id="closeModal">Close</button>
+        </div>
+
+        <button id="openModal">Open Modal</button>
+
+        <script>
+            document.getElementById("openModal").addEventListener("click", () => {
+                document.getElementById("modal").style.display = "block";
+            });
+
+            document.getElementById("closeModal").addEventListener("click", () => {
+                document.getElementById("modal").style.display = "none";
+            });
+
+            document.getElementById("myForm").addEventListener("submit", (event) => {
+                event.preventDefault();
+                alert("Form submitted: " + document.getElementById("name").value);
+            });
+        </script>
+</body>
+</html>
