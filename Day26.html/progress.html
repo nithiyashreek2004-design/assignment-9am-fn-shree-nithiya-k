@@ -3,6 +3,7 @@ Use getElementById() or querySelector() to modify titles dynamically.
 Add a button that changes text or background color.
 Use appendChild() to add a new project section dynamically.
 Add event listeners to handle clicks, form submissions, or hover effects -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,7 +107,7 @@ Add event listeners to handle clicks, form submissions, or hover effects -->
 </style>
 <body>
     <div class="container">
-        <button type="button" class="change-btn" onclick="changeTitle()">Change Title</button>
+        <button type="button" class="change-btn">Change Title</button>
         <h1 id="title">Product List</h1>
         
         <div class="product-list" id="productList">
@@ -168,7 +169,20 @@ Add event listeners to handle clicks, form submissions, or hover effects -->
         </div>
     </div>
 <script>
-    document.getElementById("title").innerText = "shopping site";
+    const changeBtn = document.querySelector('.change-btn');
+    const title = document.getElementById('title');
+
+    changeBtn.addEventListener('click', function() {
+        title.textContent = 'Shopping time';
+    });
+    const addBtns = document.querySelectorAll('.add-btn');
+    addBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.textContent = 'Added to Cart';
+            this.style.backgroundColor = '#20c997'; 
+        });
+    });
+    
 </script>
 </body>
 </html>
