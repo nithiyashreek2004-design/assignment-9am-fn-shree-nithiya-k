@@ -1,0 +1,174 @@
+<!-- Open your portfolio or product page.
+Use getElementById() or querySelector() to modify titles dynamically.
+Add a button that changes text or background color.
+Use appendChild() to add a new project section dynamically.
+Add event listeners to handle clicks, form submissions, or hover effects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .change-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .change-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .product-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .price {
+        font-size: 20px;
+        color: #28a745;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .add-btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .add-btn:hover {
+        background-color: #218838;
+    }
+</style>
+<body>
+    <div class="container">
+        <button type="button" class="change-btn" onclick="changeTitle()">Change Title</button>
+        <h1 id="title">Product List</h1>
+        
+        <div class="product-list" id="productList">
+            <div class="product-card">
+                <h2>Smart Watch</h2>
+                <p class="description">Track your fitness, steps, and notifications with this stylish smartwatch.</p>
+                <p class="price">$579.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2>Bluetooth Speaker</h2>
+                <p class="description">Enjoy high-quality sound with this portable Bluetooth speaker.</p>
+                <p class="price">$459.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2>Smartphone Stand</h2>
+                <p class="description">Adjustable stand for your smartphone, perfect for video calls.</p>
+                <p class="price">$619.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2>Portable Charger</h2>
+                <p class="description">Keep your devices charged on the go with this compact power bank.</p>
+                <p class="price">$729.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2>Gaming Mouse</h2>
+                <p class="description">Enhance your gaming experience with this high-precision gaming mouse.</p>
+                <p class="price">$449.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2>Wireless Headphones</h2>
+                <p class="description">Premium sound quality with noise cancellation and 30-hour battery life.</p>
+                <p class="price">$699.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2>Fitness Tracker</h2>
+                <p class="description">Monitor heart rate, sleep, and daily activity with advanced sensors.</p>
+                <p class="price">$529.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2>Running Shoe</h2>
+                <p class="description">Everyday comfort with a sporty edge for your active lifestyle.</p>
+                <p class="price">$998.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <h2>Track Jacket</h2>
+                <p class="description">Smart, Stylish. Always on track with premium fabric.</p>
+                <p class="price">$999.99</p>
+                <button type="button" class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+<script>
+    document.getElementById("title").innerText = "shopping site";
+</script>
+</body>
+</html>
