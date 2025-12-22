@@ -182,7 +182,15 @@ Add event listeners to handle clicks, form submissions, or hover effects -->
             this.style.backgroundColor = '#20c997'; 
         });
     });
-    
+    const addbtns = document.querySelectorAll('.add-btn');
+    addbtns.forEach(btn => {
+        btn.addEventListener('mouseover', function(){
+            this.style.backgroundColor="navy";
+        });
+        btn.addEventListener('mouseout', function(){
+            this.style.backgroundColor="#28a745";
+        });
+    });
 </script>
 </body>
 </html>
