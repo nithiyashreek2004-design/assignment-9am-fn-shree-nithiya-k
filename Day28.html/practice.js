@@ -27,3 +27,5 @@ if (x > 5 {
   console.log("Big");
 }
 
+let total;
+console.log(total.toUpperCase());
