@@ -1,0 +1,55 @@
+<!-- Create a closure that counts button clicks
+Write a callback using setTimeout
+Convert callback code into a promise
+Use async/await with try/catch
+Use destructuring on an object -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clickBtn">Click me</button>
+    <p>Clicks: <span id="count">0</span></p>
+    
+    <script>
+        const createCounter = () => {
+            let clicks = 0;
+            return () => {
+                clicks++;
+                document.getElementById('count').textContent = clicks;
+            };
+        };
+
+        const counter = createCounter();
+        document.getElementById('clickBtn').addEventListener('click', counter);
+
+
+    setTimeout(() => {
+    console.log("Hello after 2 seconds");
+    }, 2000);
+
+
+    function getData(){
+        return new promise(resolve =>{
+            setTimeout(() => {
+                resolve("Data loaded");
+            },1000);
+        });
+    }
+  console.log(getData());
+
+  async function fetchData(){
+    try{
+        let coffee= await getData();
+        console.log(coffee);
+    }catch(error){
+        console.log("Error:", error);
+    }
+  }
+    </script>
+</body>
+</html>
