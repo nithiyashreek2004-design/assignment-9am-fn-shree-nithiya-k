@@ -16,6 +16,7 @@ Use destructuring on an object -->
     <p>Clicks: <span id="count">0</span></p>
     
     <script>
+        // <!-- Create a closure that counts button clicks
         const createCounter = () => {
             let clicks = 0;
             return () => {
@@ -27,14 +28,14 @@ Use destructuring on an object -->
         const counter = createCounter();
         document.getElementById('clickBtn').addEventListener('click', counter);
 
-
+// Write a callback using setTimeout
     setTimeout(() => {
     console.log("Hello after 2 seconds");
     }, 2000);
 
-
+// Convert callback code into a promise
     function getData(){
-        return new promise(resolve =>{
+        return new Promise(resolve =>{
             setTimeout(() => {
                 resolve("Data loaded");
             },1000);
@@ -42,6 +43,7 @@ Use destructuring on an object -->
     }
   console.log(getData());
 
+// Use async/await with try/catch
   async function fetchData(){
     try{
         let coffee= await getData();
@@ -50,7 +52,7 @@ Use destructuring on an object -->
         console.log("Error:", error);
     }
   }
-
+// Use destructuring on an object
   const student = {
   name: "Nithiya",
   age: 20,
