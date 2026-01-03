@@ -15,21 +15,53 @@ Write one real-world use case for asynchronous JavaScript -->
  without waiting for that task to finish. It is needed to improve performance and responsiveness, 
  especially for operations that take time, like network requests or file I/O. -->
 
- <!-- Explain callback functions with a real-life example. -->
-     <!-- callback is function inside a function -->
-.
+ <!-- Explain callback functions with a real-life example? 
+    callback is function inside a function   
+ ex:i will call you back after my work is done {or}ordering food in restaurant 
+-->
+ 
+<!-- What is callback hell? Why is it a problem? 
+     callback hell: callback functions nested within other callback functions
+     problem: makes code hard to read.debug and maintain   
+-->
 
+<!-- Difference between callbacks and promises.
+  callback : function passed as an argument to another function to be executed later
+  promise : object representing the eventual completion or failure of an asynchronous operation
+  {Callback:“Here is my function, call it later”
+   Promise:“Here is my promise, I’ll give result later”}
+-->
 
+<!-- Define a Promise and explain its states?
+ The Promise Object represents the completion or failure of an asynchronous operation and its results.
+ it has three states:
+ 1. Pending: Initial state, neither fulfilled nor rejected.
+-->
 
+<!-- Why is async/await preferred over .then()? 
+ then is an chaining method for handling promises, which can lead to nested structures and harder-to-read code.
+ async/await provides a cleaner and more readable syntax for working with promises, making asynchronous code look
+-->
 
+<!-- Can await be used without async? Why? 
+    No, await cannot be used without async because await is designed to work within async functions. 
+    Using await outside of an async function will result in a syntax error.
+-->
 
+<!-- What happens if a promise is rejected?
+ reject: A function to reject the promise with a reason (error)
+-->
 
+<!-- Explain error handling in async/await.
+    Error handling in async/await is typically done using try...catch blocks. 
+    When an asynchronous operation that returns a promise is awaited, 
+    if the promise is rejected, the control is transferred to the catch block where the error can be handled appropriately.
+-->
 
-
-
-
-
-
+<!-- Write one real-world use case for asynchronous JavaScript 
+    Real-world use case: Fetching data from a remote server (e.g., loading user profiles, product details, etc.) 
+    without blocking the main thread, allowing the application to remain responsive to user interactions.
+--> 
 
 
 
